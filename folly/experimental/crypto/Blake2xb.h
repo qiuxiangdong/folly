@@ -85,6 +85,8 @@ class Blake2xb {
    * Shorthand for calling the no-argument constructor followed by
    * newInstance.init(outputLength, key, salt, personlization).
    */
+  // explict specifies tha the constructor may only be used for object
+  // construction, and not for type conversion,
   explicit Blake2xb(
       size_t outputLength,
       ByteRange key = {},
