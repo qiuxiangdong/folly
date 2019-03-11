@@ -79,9 +79,12 @@ class LtHash {
 
   // Note: we explicitly implement copy constructor and copy assignment
   // operator to make sure the checksum_ IOBuf is deep-copied.
+
+  // lvalue for a reference
   LtHash(const LtHash<B, N>& that);
   LtHash<B, N>& operator=(const LtHash<B, N>& that);
 
+  // rvalue for a reference
   LtHash(LtHash<B, N>&& that) noexcept = default;
   LtHash<B, N>& operator=(LtHash<B, N>&& that) noexcept = default;
   ~LtHash() = default;
