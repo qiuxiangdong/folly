@@ -44,7 +44,7 @@ class Blake2xbTestBase : public ::testing::Test {
     return folly::range(bytes);
   }
 
-  virtual folly::ByteRange getHashKey() const = 0;
+  virtual folly::ByteRange getHashKey() const = 0; // a pure virtual function
 
   void checkTestVector(const std::vector<std::string>& testVector) {
     folly::ByteRange input = getHashInput();
