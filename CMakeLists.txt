@@ -11,6 +11,9 @@ endif()
 # includes
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMake" ${CMAKE_MODULE_PATH})
 
+include_directories(include /usr/local/include /usr/local/Cellar/boost_1_69_0)
+link_directories(/usr/local/lib)
+
 # package information
 set(PACKAGE_NAME      "folly")
 set(PACKAGE_VERSION   "0.58.0-dev")
